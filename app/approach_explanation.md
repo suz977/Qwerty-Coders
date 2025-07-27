@@ -1,11 +1,12 @@
+# Adobe Hackathon Round 1B: Persona-Driven Document Intelligence
 
-# Adobe Hackathon Task 1A: PDF Outline Extraction
+## Goal
 
-A high-performance, CPU-optimized solution for extracting structured outlines from PDF documents.
+The goal of this task was to process a PDF like a machine — extract its high-level structure and identify meaningful sections, ranked by relevance to a user-defined persona and task ("job to be done").
 
 ## Overview
 
-This solution extracts document titles and hierarchical headings (H1, H2, H3) from PDF files using a multi-method approach that balances speed and accuracy.
+This solution reads through a bunch of PDF files and picks out the parts that matter most based on what a specific person is looking for. It uses simple natural language processing and compares the content using TF-IDF scores to figure out what’s most relevant. Then, it organizes and ranks the sections so the important information is easy to find and understand.
 
 ## Features
 
@@ -15,137 +16,96 @@ This solution extracts document titles and hierarchical headings (H1, H2, H3) fr
 - **Robust Analysis**: Intelligent font size and formatting analysis for heading detection
 - **Docker Ready**: Containerized solution with all dependencies included
 
-## Architecture
+## Methodology
 
-### Method 1: PyMuPDF Outline Extraction (Primary)
-- Extracts existing PDF bookmarks/table of contents
-- Fastest method when bookmarks are available
-- Near-instantaneous processing
+1. **PDF Text Extraction**:
+   - Each PDF is parsed using PyMuPDF.
+   - Text blocks are filtered based on visual cues such as starting with a capital letter and having a minimum     length, as well as basic regex rules to identify candidate headings.
 
-### Method 2: Font-Based Analysis (Fallback)
-- Analyzes font sizes, styles, and positioning across the document
-- Uses statistical analysis to identify heading fonts vs body text
-- Groups characters by lines and applies heading detection heuristics
+2. **Section Detection**:
+   - We identify section-level headings (not necessarily structured like H1/H2/H3 here) by looking at bold or larger-font text that usually appears in blocks at the beginning of paragraphs or pages.
 
-### Method 3: Title Extraction
-- Extracts titles from PDF metadata
-- Falls back to first-page analysis for largest/centered text
-- Smart cleaning and validation of extracted titles
+3. **Ranking Relevant Sections**:
+   - We build a TF-IDF vector space using all detected section texts and the user’s `job_to_be_done` phrase.
+   - Cosine similarity is used to score how relevant each section is to the job/task.
+   - The top 5 sections are selected and ranked by their importance.
 
-## Algorithm Details
+4. **Subsection Extraction**:
+   - Each top section is further split into smaller paragraphs.
+   - These paragraphs are again ranked by similarity to the job description to extract the top 3 refined insights or highlights.
 
-### Font Analysis Heuristics
-1. **Statistical Font Analysis**: Identifies most common font size as body text
-2. **Heading Font Detection**: Finds fonts significantly larger than body text
-3. **Hierarchical Classification**: Maps font sizes to H1, H2, H3 levels
-4. **Position-Based Filtering**: Considers text positioning and formatting
+5. **JSON Construction**:
+   - The final structured output contains:
+     - Metadata (persona, job, timestamp, input files)
+     - Top-ranked sections with page numbers
+     - Refined highlights for deeper insight
 
-### Heading Level Determination
-- **H1**: Largest font size, typically centered or prominent
-- **H2**: Second largest font size, often bold
-- **H3**: Third largest font size, smaller than H2 but larger than body
+## Execution Setup
 
-### Text Cleaning
-- Removes page numbers, chapter prefixes, and formatting artifacts
-- Validates heading length (3-200 characters)
-- Normalizes whitespace and line breaks
-
-## Dependencies
-
-- **PyMuPDF (1.23.27)**: Fast PDF processing and outline extraction
-- **pdfplumber (0.11.2)**: Detailed character-level PDF analysis
-- **pdfminer.six (20231228)**: Low-level PDF parsing capabilities
-
-## Docker Usage
-
-### Build the Image
-```bash
-docker build --platform linux/amd64 -t pdf-outline-extractor:latest .
-```
-
-### Run the Container
-```bash
-docker run --rm   -v $(pwd)/input:/app/input   -v $(pwd)/output:/app/output   --network none   pdf-outline-extractor:latest
-```
-
-See [BUILD_INSTRUCTIONS.md](BUILD_INSTRUCTIONS.md) for a full quick start guide.
+The solution is fully containerized using Docker. It processes PDFs from an input folder and writes the output as a JSON file to the output folder, supporting offline and fast execution (≤10s for 50 pages). The Docker image respects all constraints including no GPU, no internet, and ≤200MB model usage.
 
 ## Input/Output Format
 
 ### Input
-- Directory: /app/input
+- Directory: `/input_pdfs`
 - Format: PDF files (*.pdf)
 - Limit: Up to 50 pages per PDF
 
 ### Output
-- Directory: /app/output
-- Format: JSON files with same name as input PDF
+- Directory: `/output`
+- Format: JSON files with same name 'output'
 - Structure:
 ```json
 {
-  "title": "Document Title",
-  "outline": [
+  "metadata": {
+    "input_documents": ["doc1.pdf", "doc2.pdf"],
+    "persona": "College Student Exploring Data Analytics",
+    "job_to_be_done": "Understand key tools and skills needed to become a data analyst",
+    "processing_timestamp": "2025-07-26T14:30:00"
+  },
+  "extracted_sections": [
     {
-      "level": "H1",
-      "text": "Introduction", 
-      "page": 1
-    },
+      "document": "doc1.pdf",
+      "page_number": 4,
+      "section_title": "Data Analytics Tools Overview",
+      "importance_rank": 1
+    }
+  ],
+  "subsection_analysis": [
     {
-      "level": "H2",
-      "text": "Background",
-      "page": 2
+      "document": "doc1.pdf",
+      "refined_text": "Pandas is a fundamental Python library for data wrangling...",
+      "page_number": 4
     }
   ]
 }
 ```
-
 ## Performance Specifications
 
-- **Processing Time**: ≤10 seconds for 50-page PDF
-- **Model Size**: Lightweight libraries, no ML models required
-- **Memory Usage**: Optimized for 16GB RAM systems
-- **CPU**: Utilizes multi-core processing on 8-CPU systems
-- **Architecture**: AMD64 (x86_64) compatible
+- **Input Limit**: 3–10 PDFs per run
+- **Output**: Single structured JSON file
+- **Processing Time**: ~1–2 seconds per document (avg. 5–10 pages)
+- **Model Type**: Lightweight, rule-based with TF-IDF (no external model or internet dependency)
 
 ## Error Handling
 
-- Graceful fallback between extraction methods
-- Robust error logging and recovery
-- Empty results for failed extractions rather than crashes
-- Comprehensive input validation
-
-## Optimization Features
-
-- **Lazy Loading**: Processes pages only when needed
-- **Memory Efficient**: Closes resources promptly
-- **Parallel Ready**: Can be extended for multi-file parallel processing
-- **Caching**: Reuses font analysis across pages
-
-## Testing
-
-The solution has been designed to handle various PDF types:
-- Academic papers with clear heading hierarchies
-- Business documents with embedded bookmarks
-- Scanned documents (where text is selectable)
-- Multi-language documents
-- Complex layouts with mixed formatting
-
-## Limitations
-
-- Requires selectable text (not pure image-based PDFs)
-- Heading detection accuracy depends on consistent font usage
-- Limited to H1, H2, H3 levels as per requirements
-- No network access for enhanced processing
+- Graceful exit if input folder contains less than 3 or more than 10 PDFs
+- Robust handling of empty or non-relevant text blocks
+- Ensures fallback to empty output structures rather than failure
 
 ## Future Enhancements
+- Use of language models for deeper semantic scoring
+- Dockerized deployment for easier portability
+- GUI/Web interface for easier persona input and result viewing
 
-- Multi-language OCR support
-- Advanced layout analysis with computer vision
-- Machine learning-based heading classification
-- Support for tables and figures in outline
+## Summary
+
+The solution is built in a clean, flexible way, so it’s easy to expand or adjust later. It runs well even without internet and handles performance limits smoothly. Overall, it lays a solid base for future hackathon tasks and helps make sense of documents based on what different types of users are looking for.
 
 ---
 
-**Authors**:  
-**Created**: 2025  
-**License**: MIT (for hackathon use)
+**Authors**: 
+- Suyash Pandey
+- Atishay Jain
+- Dhwanit Shah
+**Created**: 2025
