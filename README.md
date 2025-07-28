@@ -65,7 +65,7 @@ Output will be written to:
 Build the Docker Image
 docker build --platform linux/amd64 -t persona-docs .
 
-🚀 Run the Container
+## Run the Container
 docker run --rm \
   -v $(pwd)/app/input_pdfs:/app/input_pdfs \
   -v $(pwd)/app/output:/app/output \
