@@ -4,7 +4,7 @@
 This project addresses the Persona-Driven Document Intelligence challenge from Adobe India Hackathon Round 1B.  
 It processes a collection of PDFs to identify and rank sections most relevant to a given persona and job-to-be-done using TF-IDF-based semantic scoring.
 
-## 🔧 Key Features
+## Key Features
 - Fully Dockerized and CPU-optimized  
 - Accepts 3–10 PDFs and a persona + job-to-be-done input  
 - Uses TF-IDF and cosine similarity for relevance scoring  
