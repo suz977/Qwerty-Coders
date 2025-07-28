@@ -1,0 +1,352 @@
+{
+  "metadata": {
+    "input_documents": [
+      "Battlefield_Paper1__BU_Student_ (2).pdf",
+      "Enhancing-Cybersecurity-Through-Blockchain-Technology.pdf",
+      "Enhancing_Cybersecurity_Through_Blockchain_Technology.pdf",
+      "Vinod+Kumar+Uppalapu.3645(Tuijin+Jishu-Journal+of+Propulsion+Technology).pdf"
+    ],
+    "persona": "/'blockchain resercher",
+    "job_to_be_done": "iot in blockchain",
+    "processing_timestamp": "2025-07-28T13:57:10"
+  },
+  "extracted_sections": [
+    {
+      "document": "Battlefield_Paper1__BU_Student_ (2).pdf",
+      "page_number": 3,
+      "section_title": "C. Blockchain",
+      "importance_rank": 1
+    },
+    {
+      "document": "Battlefield_Paper1__BU_Student_ (2).pdf",
+      "page_number": 5,
+      "section_title": "We have ten smart IoT devices to capture the surrounding\ninformation and one gateway consisting of robust IDS to iden-\ntify malicious activity in the IoT-enabled battlefield layer. We\nhave one command center that creates the Layer-1 Blockchain\nnetwork using Ethereum and Swarm to record the tamper-\nresistant information and handle scalability, respectively, in\nthe Blockchain layer. Further, we have three military units in\nthe interaction layer that perform Blockchain-based operations\nusing smart contracts (DApp) to update the rest of the network\nabout the malicious smart IoT device and one command center\nto perform consensus.",
+      "importance_rank": 2
+    },
+    {
+      "document": "Battlefield_Paper1__BU_Student_ (2).pdf",
+      "page_number": 6,
+      "section_title": "The BoT plays an important role in performing mission-\ncritical operations with the help of smart IoT devices. How-\never, identifying the malicious smart IoT device and taking\nthe necessary action on time to protect the overall network\nis important. Simultaneously recording this information trans-\nparently to alert others (i.e., military units) in the network\nis also required. In this context, this paper proposes a three-\nlayered architecture called TSBT that uses blockchain and\ncybersecurity technologies. The first layer consists of smart\nIoT devices and a gateway to capture battlefield information\nand provide it to the gateway. The gateway utilizes this\ninformation and passes it to the robust IDS to identify the\nmalicious smart IoT devices if they exist. The second layer\ncontains a blockchain network and swarm, designed by the\ncommand center to transparently record the information of\nmalicious smart IoT devices to alert military units. The third\nlayer consists of smart contracts as DApps for the military\nunits to perform various operations using smart contract logic.\nFurther, three smart contracts are presented to register smart\nIoT devices, record the details of malicious smart IoT devices,\nand change the updated IP information on the blockchain\nnetwork. Further, a scenario is designed to elaborate on the\nworkings of the proposed framework. In the future, we will\nimplement the proposed framework on the layer-2 blockchain\nto utilize this model to benefit society.",
+      "importance_rank": 3
+    },
+    {
+      "document": "Battlefield_Paper1__BU_Student_ (2).pdf",
+      "page_number": 5,
+      "section_title": "Fig. 2. Reg IoT() FunctionOutput",
+      "importance_rank": 4
+    },
+    {
+      "document": "Battlefield_Paper1__BU_Student_ (2).pdf",
+      "page_number": 2,
+      "section_title": "In [8], authors presented various use cases for applying\nBlockchain in cybersecurity to safeguard the IoT network and\nits data. In [9], authors presented the concept and practical\ntechniques useful in creating and designing decentralized cy-\nbersecurity software using Blockchain (i.e., book chapters). In\n[10], authors proposed a Blockchain-based solution for secure\ncommunication in the BoT ecosystem using Blockchain and\ncybersecurity. In [11], authors focused on security challenges\nof the Blockchain-IoT ecosystem through applicable use cases.\nThey also provided insight into the Blockchain platforms,\nincluding Ethereum, Hyperledger, and IOTA, to exhibit their\nrespective challenges, constraints, and prospects regarding\nperformance and scalability. In [12], authors proposed a three-\ntier architecture for the BoT network containing an application\nand service layer, a network and cybersecurity layer, and\na battlefield layer. Further, they implemented CNN-YOLO-\nbased target detection and formulated information security and\nprivacy policies to maintain algorithmic data access and autho-\nrization. In [14], authors proposed an IoT framework named\nIoBTChain using Blockchain and smart contracts. Further,\na credit-based resource management system is designed for\nthe Integration Framework of Internet of Battlefield Things\n(IoBT) to control the quantity of resources obtained from the\ncloud server based on some predetermined condition. In [7],\nauthors proposed a robust IDS that utilizes low-level system\ninformation to learn the pattern of device behaviour. So that, it\ncan easily differentiate between legit and malicious events. In\n[23], authors introduced a Passban IDS model that is based on\nintelligent anomaly enabled IDS leveraging edge computing to\naddress IoT devices vulnerabilities. In [21], authors focused on\nrecent studies to detect cyber attacks using ML based IDS.\nThey discussed the trend of integrating ML into NIDS to\nimprove the quality of cyber attack detection.",
+      "importance_rank": 5
+    },
+    {
+      "document": "Enhancing-Cybersecurity-Through-Blockchain-Technology.pdf",
+      "page_number": 16,
+      "section_title": "Networks, P. (2020, August 6). 2020 Unit 42 IoT Threat Report. https://unit42.paloaltonetworks.com/\niot-threat-report-2020/",
+      "importance_rank": 1
+    },
+    {
+      "document": "Enhancing-Cybersecurity-Through-Blockchain-Technology.pdf",
+      "page_number": 7,
+      "section_title": "With the growth and development of internet technology, our entire life has been changed in all aspects. \nComputing systems have occupied the entire world, and it is spreading from mobile technology to au-\ntonomous vehicles. All these things are possible only because of the data and its related science. With the \nhelp of the data and its related science, it is easy to collect, accumulate, administer, and analyze a huge \nvolume of data collected from various sensors and devices, with the help of IoT (Demirkan, Demirkan, \n& McKee, 2020). In this process, a huge number of self-functioning systems and devices are connected \nthrough internet technology and thereby synchronize their activities. Still, data security and solitude for \nthe substantial number of data systems within the IoT have become a question mark. As, IoT collects \nhuge volumes of assorted data from various sources with numerous devices, conventional data and cyber \nsecurity methods such as encryption are not competent to safeguard the IoT and data systems. Hence to \nensure efficient cybersecurity, more number of researches has been happening in recent times to examine \nthe developments happening in data science for protecting such systems (Sarker, 2020). As a result, a \nnew technology called blockchain has developed and it plays a major role as expected, in safeguarding \ndata science and ensuring cybersecurity, and the same has been elucidated as follows;",
+      "importance_rank": 2
+    },
+    {
+      "document": "Enhancing-Cybersecurity-Through-Blockchain-Technology.pdf",
+      "page_number": 8,
+      "section_title": "The ultimate objective of Blockchain technology is to ensure secured business transactions, especially in \nthe case of the cryptocurrency business. As data security is at the forefront of this technology, it reached \nall the spheres of the business easily. With this backdrop, this section presents various applications of \nblockchain technology in cybersecurity (Zhuang, Zamir & Liang, 2020). There are four areas identified \nbased on the blockchain-enabled security such as distributed ledger, IoT security, Domain Name System, \nand end-to-end encryption. As mentioned earlier, centralized data storage is not safe due to single point \nauthorization, as it is having the possibility of massive errors. To replace the same issue, this technology \nuses the component called distributed ledger process, through this data can be managed in a decentralized \nmanner and disseminated among numerous devices. With the help of distributed ledger architecture, \nblockchains enabled decentralized data storage, and also use Cryptographic checksums to make sure data \nsecurity. The second area where this technology ensures security is IoT, as it is having association with \nnumerous connected devices, and cybersecurity is a must for this case. Hence, blockchain technologies \ncan be used to ensure secure data transfer between the systems and not have centralized control. Domain \nName Systems (DNS) are typically functioning under a centralized controlling setup and it would be \neasy for the hackers to break the system and steal the data easily without complexity (Parizi, Dehghan-\ntanha, Azmoodeh & Choo, 2020). On the other hand blockchain technology facilitates distributed nature \ndata storage, and it would be a challenge for the hackers to find out the place where the data is stored \nexactly, and it is more complicated to discover the point of entry. Thus the data can be safe and without \nany manipulation. In recent times all the applications are using more number of messaging services, for \nthe same they are using the end-to-end encryption, to ensure secured data transfer. For the same, this",
+      "importance_rank": 3
+    },
+    {
+      "document": "Enhancing-Cybersecurity-Through-Blockchain-Technology.pdf",
+      "page_number": 1,
+      "section_title": "Enhancing Cybersecurity Through Blockchain Technology Enhancing\nCybersecurity Through Blockchain Technology",
+      "importance_rank": 4
+    },
+    {
+      "document": "Enhancing-Cybersecurity-Through-Blockchain-Technology.pdf",
+      "page_number": 2,
+      "section_title": "Enhancing Cybersecurity \nThrough Blockchain Technology",
+      "importance_rank": 5
+    },
+    {
+      "document": "Enhancing_Cybersecurity_Through_Blockchain_Technology.pdf",
+      "page_number": 4,
+      "section_title": "Cybersecurity with a touch of blockchain: A revolutionary \napproach to the traditional methods of securing different fields \nfrom risks and insecurity. However, one case is worth noting \n\u2014 the incorporation of the blockchain platform into the \nInternet of Things (IoT). The information generated from IoT \ndevices can be archived in a tamper-proof chain of blocks with \nblockchain, making it difficult to change the records and \nallowing for reliable communication among devices [27].",
+      "importance_rank": 1
+    },
+    {
+      "document": "Enhancing_Cybersecurity_Through_Blockchain_Technology.pdf",
+      "page_number": 6,
+      "section_title": "Redaction in Blockchain-Based IoT Systems,\" Sensors, vol. 23, \nno. 16, p. 7105, 2023, doi: https://doi.org/10.3390/s23167105.",
+      "importance_rank": 2
+    },
+    {
+      "document": "Enhancing_Cybersecurity_Through_Blockchain_Technology.pdf",
+      "page_number": 2,
+      "section_title": "Enhancing Cybersecurity through Blockchain",
+      "importance_rank": 3
+    },
+    {
+      "document": "Enhancing_Cybersecurity_Through_Blockchain_Technology.pdf",
+      "page_number": 3,
+      "section_title": "B. Application of Blockchain in Cybersecurity",
+      "importance_rank": 4
+    },
+    {
+      "document": "Enhancing_Cybersecurity_Through_Blockchain_Technology.pdf",
+      "page_number": 2,
+      "section_title": "A. Blockchain Technology Fundamentals",
+      "importance_rank": 5
+    },
+    {
+      "document": "Vinod+Kumar+Uppalapu.3645(Tuijin+Jishu-Journal+of+Propulsion+Technology).pdf",
+      "page_number": 5,
+      "section_title": "According to the above diagram, there is a lot of focus on how Blockchain might strengthen protections for IoT \ninfrastructure, data, and devices. The most significant threat to the safety of IoT networks is the possibility of \nunauthorized access to and manipulation of connected devices. Blockchain security solutions can aid all IoT \ndevices in more effectively restricting access and sharing data (Sharma et al., 2017).",
+      "importance_rank": 1
+    },
+    {
+      "document": "Vinod+Kumar+Uppalapu.3645(Tuijin+Jishu-Journal+of+Propulsion+Technology).pdf",
+      "page_number": 1,
+      "section_title": "Keywords: Blockchain cybersecurity; Internet of Things (IoT); Data protection; Network security",
+      "importance_rank": 2
+    },
+    {
+      "document": "Vinod+Kumar+Uppalapu.3645(Tuijin+Jishu-Journal+of+Propulsion+Technology).pdf",
+      "page_number": 4,
+      "section_title": "Recent research evaluations concluded that Blockchain offered superior viability in protecting IoT, network, and \ndata storage. The following diagram illustrates the distribution of current Blockchain security implementations, \nwith the Internet of Things (IoT), networks, data, PKI, and data privacy accounting for the vast majorit:",
+      "importance_rank": 3
+    },
+    {
+      "document": "Vinod+Kumar+Uppalapu.3645(Tuijin+Jishu-Journal+of+Propulsion+Technology).pdf",
+      "page_number": 5,
+      "section_title": "The blockchain evolves and finds new uses as time goes on. Cybersecurity is one field where it has been \ninvestigated and used. Check out the results of recent research to see what experts think about Blockchain \ntechnology and its potential uses for securing Internet of Things (IoT) devices, networks, and data storage and \ntransfer. Protecting Internet of Things devices using Blockchain technology is an issue that has been carefully \nconsidered by most Blockchain security experts. The Blockchain's emphasis on data and network security is also \nessential. As we've seen, Blockchain technology has the potential to increase the safety of IoT devices by making \nidentification and data sharing more reliable. These devices are hack-proof despite having default settings that \naren't very secure. The method may also be used to keep networks secure by blocking access to them from \nunwelcome parties. Finally, Blockchain can safeguard data from being viewed or altered by intruders by using \nencoded blocks that can only be read by the designated parties. Although this list is not exhaustive, the three \nscenarios above receive the most attention. Experts of the future should examine how useful a single Blockchain",
+      "importance_rank": 4
+    },
+    {
+      "document": "Vinod+Kumar+Uppalapu.3645(Tuijin+Jishu-Journal+of+Propulsion+Technology).pdf",
+      "page_number": 1,
+      "section_title": "Blockchain technology's adoption, primarily evident in the financial sector via cryptocurrencies, extends its \nviability to cybersecurity. This study delved into the perspectives of current studies, exploring diverse applications \nof Blockchain within the cybersecurity domain. Predominantly, the researchers emphasize safeguarding Internet \nof Things (IoT) devices, networks, and data. A comprehensive analysis revealed various mechanisms proposed \nby prior studies to leverage Blockchain's security benefits in addressing IT's critical challenges the spotlight \nremains on fortifying IoT security, stemming from the staggering count of approximately 9 billion devices with \ncompromised configurations. A pressing concern is their susceptibility to hacking and subsequent enlistment into \nmalicious botnet networks.",
+      "importance_rank": 5
+    }
+  ],
+  "subsection_analysis": [
+    {
+      "document": "Battlefield_Paper1__BU_Student_ (2).pdf",
+      "refined_text": "the Blockchain layer. Further, we have three military units in",
+      "page_number": 5
+    },
+    {
+      "document": "Battlefield_Paper1__BU_Student_ (2).pdf",
+      "refined_text": "have one command center that creates the Layer-1 Blockchain",
+      "page_number": 5
+    },
+    {
+      "document": "Battlefield_Paper1__BU_Student_ (2).pdf",
+      "refined_text": "We have ten smart IoT devices to capture the surrounding",
+      "page_number": 5
+    },
+    {
+      "document": "Battlefield_Paper1__BU_Student_ (2).pdf",
+      "refined_text": "IoT devices, record the details of malicious smart IoT devices,",
+      "page_number": 6
+    },
+    {
+      "document": "Battlefield_Paper1__BU_Student_ (2).pdf",
+      "refined_text": "implement the proposed framework on the layer-2 blockchain",
+      "page_number": 6
+    },
+    {
+      "document": "Battlefield_Paper1__BU_Student_ (2).pdf",
+      "refined_text": "contains a blockchain network and swarm, designed by the",
+      "page_number": 6
+    },
+    {
+      "document": "Battlefield_Paper1__BU_Student_ (2).pdf",
+      "refined_text": "Fig. 2. Reg IoT() FunctionOutput",
+      "page_number": 5
+    },
+    {
+      "document": "Battlefield_Paper1__BU_Student_ (2).pdf",
+      "refined_text": "Blockchain in cybersecurity to safeguard the IoT network and",
+      "page_number": 2
+    },
+    {
+      "document": "Battlefield_Paper1__BU_Student_ (2).pdf",
+      "refined_text": "of the Blockchain-IoT ecosystem through applicable use cases.",
+      "page_number": 2
+    },
+    {
+      "document": "Battlefield_Paper1__BU_Student_ (2).pdf",
+      "refined_text": "rization. In [14], authors proposed an IoT framework named",
+      "page_number": 2
+    },
+    {
+      "document": "Enhancing-Cybersecurity-Through-Blockchain-Technology.pdf",
+      "refined_text": "iot-threat-report-2020/",
+      "page_number": 16
+    },
+    {
+      "document": "Enhancing-Cybersecurity-Through-Blockchain-Technology.pdf",
+      "refined_text": "Networks, P. (2020, August 6). 2020 Unit 42 IoT Threat Report. https://unit42.paloaltonetworks.com/",
+      "page_number": 16
+    },
+    {
+      "document": "Enhancing-Cybersecurity-Through-Blockchain-Technology.pdf",
+      "refined_text": "the substantial number of data systems within the IoT have become a question mark. As, IoT collects",
+      "page_number": 7
+    },
+    {
+      "document": "Enhancing-Cybersecurity-Through-Blockchain-Technology.pdf",
+      "refined_text": "new technology called blockchain has developed and it plays a major role as expected, in safeguarding",
+      "page_number": 7
+    },
+    {
+      "document": "Enhancing-Cybersecurity-Through-Blockchain-Technology.pdf",
+      "refined_text": "security methods such as encryption are not competent to safeguard the IoT and data systems. Hence to",
+      "page_number": 7
+    },
+    {
+      "document": "Enhancing-Cybersecurity-Through-Blockchain-Technology.pdf",
+      "refined_text": "based on the blockchain-enabled security such as distributed ledger, IoT security, Domain Name System,",
+      "page_number": 8
+    },
+    {
+      "document": "Enhancing-Cybersecurity-Through-Blockchain-Technology.pdf",
+      "refined_text": "security. The second area where this technology ensures security is IoT, as it is having association with",
+      "page_number": 8
+    },
+    {
+      "document": "Enhancing-Cybersecurity-Through-Blockchain-Technology.pdf",
+      "refined_text": "numerous connected devices, and cybersecurity is a must for this case. Hence, blockchain technologies",
+      "page_number": 8
+    },
+    {
+      "document": "Enhancing-Cybersecurity-Through-Blockchain-Technology.pdf",
+      "refined_text": "Cybersecurity Through Blockchain Technology",
+      "page_number": 1
+    },
+    {
+      "document": "Enhancing-Cybersecurity-Through-Blockchain-Technology.pdf",
+      "refined_text": "Enhancing Cybersecurity Through Blockchain Technology Enhancing",
+      "page_number": 1
+    },
+    {
+      "document": "Enhancing-Cybersecurity-Through-Blockchain-Technology.pdf",
+      "refined_text": "Through Blockchain Technology",
+      "page_number": 2
+    },
+    {
+      "document": "Enhancing-Cybersecurity-Through-Blockchain-Technology.pdf",
+      "refined_text": "Enhancing Cybersecurity",
+      "page_number": 2
+    },
+    {
+      "document": "Enhancing_Cybersecurity_Through_Blockchain_Technology.pdf",
+      "refined_text": "Internet of Things (IoT). The information generated from IoT",
+      "page_number": 4
+    },
+    {
+      "document": "Enhancing_Cybersecurity_Through_Blockchain_Technology.pdf",
+      "refined_text": "\u2014 the incorporation of the blockchain platform into the",
+      "page_number": 4
+    },
+    {
+      "document": "Enhancing_Cybersecurity_Through_Blockchain_Technology.pdf",
+      "refined_text": "Cybersecurity with a touch of blockchain: A revolutionary",
+      "page_number": 4
+    },
+    {
+      "document": "Enhancing_Cybersecurity_Through_Blockchain_Technology.pdf",
+      "refined_text": "Redaction in Blockchain-Based IoT Systems,\" Sensors, vol. 23,",
+      "page_number": 6
+    },
+    {
+      "document": "Enhancing_Cybersecurity_Through_Blockchain_Technology.pdf",
+      "refined_text": "no. 16, p. 7105, 2023, doi: https://doi.org/10.3390/s23167105.",
+      "page_number": 6
+    },
+    {
+      "document": "Enhancing_Cybersecurity_Through_Blockchain_Technology.pdf",
+      "refined_text": "Enhancing Cybersecurity through Blockchain",
+      "page_number": 2
+    },
+    {
+      "document": "Enhancing_Cybersecurity_Through_Blockchain_Technology.pdf",
+      "refined_text": "B. Application of Blockchain in Cybersecurity",
+      "page_number": 3
+    },
+    {
+      "document": "Enhancing_Cybersecurity_Through_Blockchain_Technology.pdf",
+      "refined_text": "A. Blockchain Technology Fundamentals",
+      "page_number": 2
+    },
+    {
+      "document": "Vinod+Kumar+Uppalapu.3645(Tuijin+Jishu-Journal+of+Propulsion+Technology).pdf",
+      "refined_text": "According to the above diagram, there is a lot of focus on how Blockchain might strengthen protections for IoT",
+      "page_number": 5
+    },
+    {
+      "document": "Vinod+Kumar+Uppalapu.3645(Tuijin+Jishu-Journal+of+Propulsion+Technology).pdf",
+      "refined_text": "unauthorized access to and manipulation of connected devices. Blockchain security solutions can aid all IoT",
+      "page_number": 5
+    },
+    {
+      "document": "Vinod+Kumar+Uppalapu.3645(Tuijin+Jishu-Journal+of+Propulsion+Technology).pdf",
+      "refined_text": "infrastructure, data, and devices. The most significant threat to the safety of IoT networks is the possibility of",
+      "page_number": 5
+    },
+    {
+      "document": "Vinod+Kumar+Uppalapu.3645(Tuijin+Jishu-Journal+of+Propulsion+Technology).pdf",
+      "refined_text": "Keywords: Blockchain cybersecurity; Internet of Things (IoT); Data protection; Network security",
+      "page_number": 1
+    },
+    {
+      "document": "Vinod+Kumar+Uppalapu.3645(Tuijin+Jishu-Journal+of+Propulsion+Technology).pdf",
+      "refined_text": "Recent research evaluations concluded that Blockchain offered superior viability in protecting IoT, network, and",
+      "page_number": 4
+    },
+    {
+      "document": "Vinod+Kumar+Uppalapu.3645(Tuijin+Jishu-Journal+of+Propulsion+Technology).pdf",
+      "refined_text": "data storage. The following diagram illustrates the distribution of current Blockchain security implementations,",
+      "page_number": 4
+    },
+    {
+      "document": "Vinod+Kumar+Uppalapu.3645(Tuijin+Jishu-Journal+of+Propulsion+Technology).pdf",
+      "refined_text": "with the Internet of Things (IoT), networks, data, PKI, and data privacy accounting for the vast majorit:",
+      "page_number": 4
+    },
+    {
+      "document": "Vinod+Kumar+Uppalapu.3645(Tuijin+Jishu-Journal+of+Propulsion+Technology).pdf",
+      "refined_text": "essential. As we've seen, Blockchain technology has the potential to increase the safety of IoT devices by making",
+      "page_number": 5
+    },
+    {
+      "document": "Vinod+Kumar+Uppalapu.3645(Tuijin+Jishu-Journal+of+Propulsion+Technology).pdf",
+      "refined_text": "technology and its potential uses for securing Internet of Things (IoT) devices, networks, and data storage and",
+      "page_number": 5
+    },
+    {
+      "document": "Vinod+Kumar+Uppalapu.3645(Tuijin+Jishu-Journal+of+Propulsion+Technology).pdf",
+      "refined_text": "considered by most Blockchain security experts. The Blockchain's emphasis on data and network security is also",
+      "page_number": 5
+    },
+    {
+      "document": "Vinod+Kumar+Uppalapu.3645(Tuijin+Jishu-Journal+of+Propulsion+Technology).pdf",
+      "refined_text": "remains on fortifying IoT security, stemming from the staggering count of approximately 9 billion devices with",
+      "page_number": 1
+    },
+    {
+      "document": "Vinod+Kumar+Uppalapu.3645(Tuijin+Jishu-Journal+of+Propulsion+Technology).pdf",
+      "refined_text": "of Things (IoT) devices, networks, and data. A comprehensive analysis revealed various mechanisms proposed",
+      "page_number": 1
+    },
+    {
+      "document": "Vinod+Kumar+Uppalapu.3645(Tuijin+Jishu-Journal+of+Propulsion+Technology).pdf",
+      "refined_text": "of Blockchain within the cybersecurity domain. Predominantly, the researchers emphasize safeguarding Internet",
+      "page_number": 1
+    }
+  ]
+}
