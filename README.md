@@ -75,9 +75,11 @@ docker run --rm \
 ├── app/
 │   ├── main.py
 │   ├── requirements.txt
-│   ├── input_pdfs/        # PDF files to process
-│   └── output/            # JSON output written here
+│   ├── input_pdfs/        
+│   └── output/            
+
 ├── Dockerfile
+
 ├── README.md (this file)
 
 ## Performance
